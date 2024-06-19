@@ -301,7 +301,7 @@ def greatcircle_matrix(coords1, coords2=None, metric="meter"):
         dist = squareform(dist)
     else:
         coords2 = np.asarray(coords2)
-        assert coords1.shape == coords2.shape
+        # assert coords1.shape == coords2.shape
 
         if (abs(coords2[:, 0]) > 90).any() or (abs(coords2[:, 1]) > 180).any():
             raise ValueError(
